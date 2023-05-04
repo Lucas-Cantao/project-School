@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 3.5em;
+    background-color: #9c049c;
+}
+header h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: .3em .5em .5em .5em;
+    color: white;
+    font-weight: normal;
+}
+#quadro-avisos{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+    width: 28em;
+    height: 18.5em;
+    transition: .2s ease-in-out;
+}
+.container:hover{
+    cursor: pointer;
+}
+.container img{
+    margin-right: auto;
+    width: 25.2em;
+    height: 14.5em;
+    margin-bottom: 0;
+}
+.container ul{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    line-height: 100%;
+    justify-content: center;
+    margin-left: 2em;
+}
+.container .close-btn{
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    z-index: 1000000;
+}
+.container .close-btn:hover{
+    background-color: red;
+    color: white;
+}
+.container.show{
+    width: 80em;
+    height: 40em;
+}
+.container.show .close-btn{
+    display: none;
+}
+.container .show-btn{
+    position: absolute;
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    line-height: 9.3em;
+    width: 1.405em;
+    right: 0;
+}
+.container .show-btn:hover{
+    background-color: #ebebeb3a;
+}
+.container h1{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(194, 215, 230);
+    color: black;
+    font-size: 2em;
+    width: 12.6em;
+    height: 2em;
+    font-weight: normal;
+    transition: .5s ease-in-out;
+}
+.container.show h1{
+    height: 100%;
+    transition: .2s ease-in-out;
+}
+#add-button{
+    position: absolute;
+    display: none;
+    margin: 1.5em 1.5em 1.5em 1.5em;
+    bottom: 0;
+    right: 0;
+    background-color: #FF5757;
+    width: 2em;
+    height: 2em;
+    border-radius: 200em;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+#add-button.show{
+    display: flex;
+    transition: .5s all ease-in-out;
+}
+.container.show .post-area{
+    display: flex;
+    position: absolute;
+    height: 38em;
+    gap: 2em;
+    width: 51.4em;
+    padding: 1em;
+    margin-left: 26em;
+    margin-top: 1em;
+    flex-wrap: wrap;
+}
+.post-area-list{
+    list-style-type: none;
+}
+.container.show .post-it{
+    width: 6.5em;
+    height: 7em;
+    background-color: yellow;
+}
